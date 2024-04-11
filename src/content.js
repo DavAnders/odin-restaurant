@@ -1,4 +1,5 @@
 import Interior from "./interior.jpg";
+import createReservationForm from "./reservation";
 
 function content() {
   const contentDiv = document.getElementById("content");
@@ -18,9 +19,21 @@ function content() {
   const image = new Image();
   image.src = Interior;
 
+  const existingReservationForm = document.getElementById("reservation-form");
+
   contentDiv.appendChild(image);
   contentDiv.appendChild(attributeTag);
   contentDiv.appendChild(description);
+
+  if (!existingReservationForm) {
+    const callToAction = document.createElement("button");
+    callToAction.innerText = "Make a Reservation";
+    callToAction.addEventListener("click", () => {
+      createReservationForm();
+      document.getElementById("reservation-form").style.display = "block";
+    });
+    contentDiv.appendChild(callToAction);
+  }
 }
 
 export { content };
