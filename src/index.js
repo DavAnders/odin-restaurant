@@ -1,6 +1,7 @@
 import { content } from "./content";
 import createMenuContent from "./menu";
 import createAboutContent from "./about";
+import "./style.css";
 
 console.log("Setting up webpack");
 

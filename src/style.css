@@ -1,0 +1,246 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+}
+
+nav button:hover {
+  background-color: #505050;
+  transition-duration: 1s;
+}
+
+#buttons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+nav button {
+  justify-content: center;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 24px;
+  padding: 12px;
+}
+
+.description-p {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.attribute-p {
+  font-size: smaller;
+  margin-top: 0;
+}
+
+/* Content Styles */
+#content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#content h1,
+#content h2,
+#content h3 {
+  color: #333;
+}
+
+#content p {
+  line-height: 1.6;
+}
+
+#content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0px;
+}
+
+/* Menu Styles */
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.menu-item-image {
+  background-image: url(nuggets.avif);
+}
+
+.menu-item-image2 {
+  background-image: url(burger.jpg);
+}
+
+.menu-item-image,
+.menu-item-image2 {
+  background-size: cover;
+  background-position: center;
+  min-width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  border-radius: 8px;
+  margin-right: 20px;
+  border: 4px solid;
+  border-image: linear-gradient(to bottom, #69cdef, #dcb4e6) 1 stretch;
+  border-radius: 12px;
+}
+
+.menu-item h3 {
+  padding: 20px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, #69cdef, #dcb4e6);
+  color: black;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.menu-item p {
+  color: #666;
+  margin-left: 20px;
+}
+
+#drinks,
+#sides {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+#drinks h3,
+#sides h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .menu-item-image,
+  .menu-item-image2 {
+    min-width: 150px;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu-item h3,
+  .menu-item p {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .description-p {
+    text-align: center;
+  }
+}
+
+/* About Styles */
+
+.about-p {
+  margin-top: 40px;
+  font-style: italic;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+#contact-container {
+  margin-top: 40px;
+}
+
+#contact-header {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#contact-body {
+  color: #666;
+}
+
+#contact-body ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#contact-body ul li {
+  margin-bottom: 5px;
+}
+
+#hours-container {
+  margin-top: 40px;
+}
+
+#hours-header {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#hours-body ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#hours-body ul li {
+  margin-bottom: 5px;
+}
+
+/* Reservation Form Styles */
+#reservation-form {
+  margin-top: 40px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"],
+.reservation-btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+.reservation-btn:hover {
+  background-color: #ffdf4d;
+}

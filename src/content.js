@@ -3,12 +3,15 @@ import createReservationForm from "./reservation";
 
 function content() {
   const contentDiv = document.getElementById("content");
+  contentDiv.classList.add("content-background");
 
   const description = document.createElement("p");
+  description.classList.add("description-p");
   description.textContent =
-    "Wackdonald's: The world's premiere dining location";
+    "WackDonald's: The world's premiere dining location";
 
   const attributeTag = document.createElement("p");
+  attributeTag.classList.add("attribute-p");
   attributeTag.innerHTML =
     "Not a real restaurant page. Photo by " +
     '<a href="https://unsplash.com/@ninjason?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">' +
@@ -27,6 +30,7 @@ function content() {
 
   if (!existingReservationForm) {
     const callToAction = document.createElement("button");
+    callToAction.classList.add("reservation-btn");
     callToAction.innerText = "Make a Reservation";
     callToAction.addEventListener("click", () => {
       createReservationForm();

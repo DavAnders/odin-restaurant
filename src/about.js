@@ -1,3 +1,5 @@
+import createHoursSection from "./hours";
+
 function createAboutContent() {
   const contentDiv = document.getElementById("content");
   contentDiv.innerHTML = "";
@@ -7,6 +9,7 @@ function createAboutContent() {
   contentDiv.appendChild(aboutHeader);
 
   const aboutContent = document.createElement("p");
+  aboutContent.classList.add("about-p");
   aboutContent.innerText =
     "Indulge in a culinary journey like no other at our illustrious " +
     "establishment, where every dish is a masterpiece crafted with passion " +
@@ -51,6 +54,10 @@ function createAboutContent() {
     listItem.textContent = item;
     contactList.appendChild(listItem);
   });
+
+  // Append hours section
+  const hoursSection = createHoursSection();
+  contentDiv.appendChild(hoursSection);
 }
 
 export default createAboutContent;
